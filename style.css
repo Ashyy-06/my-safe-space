@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #fce7f3 100%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
@@ -11,7 +11,8 @@ body {
 .app-container { width: 100%; max-width: 400px; padding: 20px; }
 
 .screen {
-    background: white;
+    background: #FFFFFF;
+    border: 1px solid #fce7f3;
     padding: 30px;
     border-radius: 25px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
@@ -20,7 +21,7 @@ body {
 
 .hidden { display: none !important; }
 
-h2 { color: #2d3436; margin-bottom: 10px; }
+h2, h3 { color: #970747; margin-bottom: 10px; }
 
 input[type="password"] {
     width: 60%;
@@ -37,14 +38,17 @@ button {
     padding: 15px;
     border: none;
     border-radius: 12px;
-    background: #6c5ce7;
+    background: #970747;
     color: white;
     font-weight: bold;
     cursor: pointer;
     margin: 5px 0;
 }
 
-button:hover { opacity: 0.9; }
+button:hover {
+    background: #7a0539
+    opacity: 1; 
+}
 
 .emoji-grid {
     display: grid;
@@ -106,7 +110,8 @@ textarea {
 }
 
 .current-day {
-    border: 2px solid #6c5ce7;
+    border: 2px solid #970747; /* Highlight today in pink */
+    background-color: #fdf2f8; /* Light pink tint for today */
 }
 .tabs {
     display: flex;
@@ -117,25 +122,24 @@ textarea {
 
 .tabs button {
     background: none;
-    color: #6366f1;
+    color: #970747;
     border-radius: 0;
     font-size: 0.8rem;
     padding: 10px 5px;
 }
 
 .tabs button:hover {
-    border-bottom: 2px solid #6366f1;
+    border-bottom: 2px solid #970747;
     transform: none;
     box-shadow: none;
 }
 
 .history-card {
-    text-align: left;
-    background: #f8fafc;
-    padding: 15px;
-    border-radius: 12px;
-    margin-bottom: 10px;
-    border-left: 4px solid #6366f1;
+   background: #ffffff;
+    border-left: 4px solid #970747; /* Pink accent on journal entries */
+    border-top: 1px solid #fce7f3;
+    border-right: 1px solid #fce7f3;
+    border-bottom: 1px solid #fce7f3;
 }
 
 .history-date { font-size: 0.7rem; color: #94a3b8; }
@@ -193,7 +197,7 @@ textarea {
     box-shadow: none;
 }
 .calendar-header h2 {
-    color: #6c5ce7;
+    color: #970747;
     margin-bottom: 10px;
     font-size: 1.2rem;
     text-align: left;
@@ -230,7 +234,7 @@ textarea {
 }
 
 .btn-secondary {
-    background: #94a3b8;
+    background: #be185d;
 }
 
 .btn-danger {
@@ -243,8 +247,13 @@ textarea {
 .success-message {
     font-size: 1.4rem;        /* Makes the text larger */
     font-weight: 900;        /* Makes the letters extra thick/bold */
-    color: #4f46e5;          /* A strong, calming indigo color */
+    color:#970747 ;       
     margin: 20px 0;
     line-height: 1.4;        /* Adds space between lines if the message is long */
     text-transform: capitalize; /* Optional: makes it feel more like a title */
+}
+.icon {
+    font-size: 3rem;
+    color: #970747;
+    margin-bottom: 10px;
 }
