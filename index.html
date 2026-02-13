@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Safe Space | Digital Journal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <section id="screen-login" class="screen">
+            <div class="icon">🔒</div>
+            <h2 id="login-title">Secure Your Space</h2>
+            <p>Enter a 4-digit PIN to keep your thoughts private.</p>
+            <input type="password" id="pinInput" maxlength="4" placeholder="0000">
+            <button onclick="handleLogin()">Enter Journal</button>
+        </section>
+
+        <section id="screen-mood" class="screen hidden">
+            <h2>How's your mood today?</h2>
+            <div class="emoji-grid">
+                <button onclick="selectMood('😊', 'Happy')">😊</button>
+                <button onclick="selectMood('😔', 'Sad')">😔</button>
+                <button onclick="selectMood('😴', 'Tired')">😴</button>
+                <button onclick="selectMood('😠', 'Angry')">😠</button>
+                <button onclick="selectMood('✨', 'Inspired')">✨</button>
+            </div>
+        </section>
+
+        <section id="screen-decision" class="screen hidden">
+            <h2 id="decision-title">Feeling Mood Today?</h2>
+            <p>Do you feel like describing it?</p>
+            <div class="button-group">
+                <button class="btn-yes" onclick="showBranch(true)">Yes, I'll write</button>
+                <button class="btn-no" onclick="showBranch(false)">No, not today</button>
+            </div>
+        </section>
+
+        <section id="screen-write" class="screen hidden">
+            <h2>Pour in your heart...</h2>
+            <textarea id="journalText" placeholder="Start typing here..."></textarea>
+            <button onclick="saveEntry('detailed')">Save Entry</button>
+        </section>
+
+        <section id="screen-quick" class="screen hidden">
+            <div class="reassurance">
+                <h3>No worries at all.</h3>
+                <p>You showed up for yourself, and that's what matters most. ❤️</p>
+            </div>
+            <p>Choose a quick update for the record:</p>
+            <div class="quick-options">
+                <button onclick="saveEntry('Tough day.. need rest')">Tough day.. need rest</button>
+                <button onclick="saveEntry('Don\'t feel like writing')">Don't feel like writing</button>
+                <button onclick="saveEntry('Completely fine but busy')">Completely fine but busy</button>
+            </div>
+        </section>
+
+        <section id="screen-dashboard" class="screen hidden">
+            <div id="feedback-msg" class="success-message">Entry Saved! ✨</div>
+            <hr>
+            <div class="dashboard-actions">
+                <button class="btn-download" onclick="downloadJournal()">📥 Download Records (.txt)</button>
+                <button class="btn-lock" onclick="lockJournal()">🔒 Lock Journal</button>
+            </div>
+            <div id="history-list"></div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.app-container { width: 100%; max-width: 400px; padding: 20px; }
+
+.screen {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.hidden { display: none !important; }
+
+h2 { color: #2d3436; margin-bottom: 10px; }
+
+input[type="password"] {
+    width: 60%;
+    padding: 12px;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #6c5ce7;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+button:hover { opacity: 0.9; }
+
+.emoji-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.emoji-grid button { background: #f1f2f6; font-size: 1.5rem; color: black; }
+
+.reassurance {
+    background: #fff9db;
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 5px solid #fcc419;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.btn-no { background: #95a5a6; }
+.btn-download { background: #2ecc71; }
+.btn-lock { background: #e74c3c; }
+
+.history-item {
+    background: #f8f9fa;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 0.8rem;
+}
