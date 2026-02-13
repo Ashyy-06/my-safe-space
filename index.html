@@ -47,8 +47,8 @@
 
         <section id="screen-quick" class="screen hidden">
             <div class="reassurance">
-                <h3>No worries at all.</h3>
-                <p>You showed up for yourself, and that's what matters most. ❤️</p>
+                <h3>No worries at all, let's take it slow..</h3>
+                <p>You showed up for yourself, and that's what matters most..❤️</p>
             </div>
             <p>Choose a quick update for the record:</p>
             <div class="quick-options">
@@ -61,23 +61,35 @@
         <section id="screen-dashboard" class="screen hidden">
             <div id="feedback-msg" class="success-message">Entry Saved! ✨</div>
 
-            <div class="tabs">
-                <button onclick="showTab('calendar')">Calendar</button>
-                <button onclick="showTab('graph')">Analysis</button>
-                <button onclick="showTab('history')">Past Entries</button>
-            </div>
+            <div id="dashboard-layout">
+                <div class="stats-row">
+                    <div class="card">
+                        <h3>Mood Calender</h3>
+                        <div class="calendar-header">
+                            <h2 id="monthDisplay">Month Year</h2>
+                        </div>
 
-            <div id="tab-content">
-                <div id="calendar-view">
-                    <div id="calendar-grid" class="calendar-grid"></div>
+                        <div id="calendar-grid" class="calendar-grid"></div>
+                    </div>
+            
+                    <div class="card">
+                        <h3>Weekly Analysis</h3>
+                        <canvas id="moodChart"></canvas>
+                    </div>
                 </div>
-    
-                <div id="graph-view" class="hidden">
-                    <canvas id="moodChart"></canvas>
-                </div>
-    
-                <div id="history-view" class="hidden">
+
+                <div class="card full-width">
+                    <h3>Past Entries</h3>
                     <div id="history-list"></div>
+                </div>
+
+                <div class="settings-zone">
+                    <h3>Account Settings</h3>
+                    <div class="settings-buttons">
+                        <button class="btn-secondary" onclick="logout()">Logout</button>
+                        <button class="btn-secondary" onclick="resetPin()">Reset PIN</button>
+                        <button class="btn-danger" onclick="deleteAccount()">Delete All Data</button>
+                    </div>
                 </div>
             </div>
 

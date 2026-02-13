@@ -140,3 +140,111 @@ textarea {
 
 .history-date { font-size: 0.7rem; color: #94a3b8; }
 .history-mood { font-size: 1.2rem; float: right; }
+/* Make the overall box bigger */
+.app-container {
+    max-width: 1000px; /* This expands the width of your journal */
+}
+
+/* Create the side-by-side layout */
+.stats-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+}
+
+.full-width {
+    grid-column: span 2; /* Makes history stretch across both columns */
+}
+
+/* Adjust for mobile phones so it stacks vertically again */
+@media (max-width: 768px) {
+    .stats-row {
+        grid-template-columns: 1fr;
+    }
+}
+.history-card {
+    position: relative; /* This allows us to position the delete button in the corner */
+}
+
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: auto;
+    padding: 5px 10px;
+    background: #fee2e2; /* Very pale red */
+    color: #ef4444;      /* Soft red text */
+    font-size: 0.7rem;
+    border-radius: 6px;
+}
+
+.delete-btn:hover {
+    background: #fecaca;
+    color: #b91c1c;
+    transform: none; /* No jumping around for delete buttons */
+    box-shadow: none;
+}
+.calendar-header h2 {
+    color: #6c5ce7;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+/* Add day labels (Sun, Mon, Tue...) */
+.calendar-grid::before {
+    content: "S M T W T F S";
+    grid-column: 1 / span 7;
+    word-spacing: 25px; /* Adjust this to line up with your grid */
+    font-size: 0.7rem;
+    color: #94a3b8;
+    text-align: center;
+    margin-bottom: 5px;
+    display: block;
+}
+.settings-zone {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px dashed #e2e8f0;
+    text-align: left;
+}
+
+.settings-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.settings-buttons button {
+    width: auto;
+    font-size: 0.8rem;
+    padding: 10px 20px;
+}
+
+.btn-secondary {
+    background: #94a3b8;
+}
+
+.btn-danger {
+    background: #ef4444;
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+}
+.success-message {
+    font-size: 1.4rem;        /* Makes the text larger */
+    font-weight: 900;        /* Makes the letters extra thick/bold */
+    color: #4f46e5;          /* A strong, calming indigo color */
+    margin: 20px 0;
+    line-height: 1.4;        /* Adds space between lines if the message is long */
+    text-transform: capitalize; /* Optional: makes it feel more like a title */
+}
