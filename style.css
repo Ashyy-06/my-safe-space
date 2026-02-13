@@ -78,11 +78,65 @@ textarea {
 .btn-download { background: #2ecc71; }
 .btn-lock { background: #e74c3c; }
 
-.history-item {
-    background: #f8f9fa;
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 days a week */
+    gap: 5px;
+    margin: 20px 0;
+    background: #f1f2f6;
     padding: 10px;
-    margin-top: 10px;
-    border-radius: 8px;
-    text-align: left;
-    font-size: 0.8rem;
+    border-radius: 12px;
 }
+
+.calendar-day {
+    background: white;
+    aspect-ratio: 1 / 1; /* Makes squares */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    border-radius: 4px;
+    color: #95a5a6;
+}
+
+.day-mood {
+    font-size: 1.1rem;
+    margin-top: 2px;
+}
+
+.current-day {
+    border: 2px solid #6c5ce7;
+}
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.tabs button {
+    background: none;
+    color: #6366f1;
+    border-radius: 0;
+    font-size: 0.8rem;
+    padding: 10px 5px;
+}
+
+.tabs button:hover {
+    border-bottom: 2px solid #6366f1;
+    transform: none;
+    box-shadow: none;
+}
+
+.history-card {
+    text-align: left;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border-left: 4px solid #6366f1;
+}
+
+.history-date { font-size: 0.7rem; color: #94a3b8; }
+.history-mood { font-size: 1.2rem; float: right; }

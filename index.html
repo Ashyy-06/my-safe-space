@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Safe Space | Digital Journal</title>
@@ -59,12 +60,31 @@
 
         <section id="screen-dashboard" class="screen hidden">
             <div id="feedback-msg" class="success-message">Entry Saved! ✨</div>
-            <hr>
+
+            <div class="tabs">
+                <button onclick="showTab('calendar')">Calendar</button>
+                <button onclick="showTab('graph')">Analysis</button>
+                <button onclick="showTab('history')">Past Entries</button>
+            </div>
+
+            <div id="tab-content">
+                <div id="calendar-view">
+                    <div id="calendar-grid" class="calendar-grid"></div>
+                </div>
+    
+                <div id="graph-view" class="hidden">
+                    <canvas id="moodChart"></canvas>
+                </div>
+    
+                <div id="history-view" class="hidden">
+                    <div id="history-list"></div>
+                </div>
+            </div>
+
             <div class="dashboard-actions">
-                <button class="btn-download" onclick="downloadJournal()">📥 Download Records (.txt)</button>
+                <button class="btn-download" onclick="downloadJournal()">📥 Download Records</button>
                 <button class="btn-lock" onclick="lockJournal()">🔒 Lock Journal</button>
             </div>
-            <div id="history-list"></div>
         </section>
 
     </div>
