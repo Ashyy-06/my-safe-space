@@ -10,7 +10,7 @@
 
 ### Hosted Project Link
 
-[https://Ashyy-06.github.io/my-digital-journal/](https://Ashyy-06.github.io/my-digital-journal/)
+[https://ashyy-06.github.io/my-safe-space/](https://ashyy-06.github.io/my-safe-space/)
 
 ### Project Description
 
