@@ -85,6 +85,7 @@ Simply open the `index.html` file in any modern web browser or use a Live Server
 **Application Workflow:**
 
 *The workflow follows a logical progression: User authentication, emotional check-in, content creation, and finally data visualization on the dashboard.*
+![Flowchart](./flowchart.jpeg)
 
 ---
 
@@ -92,7 +93,8 @@ Simply open the `index.html` file in any modern web browser or use a Live Server
 
 ### Video
 
-[Link to your Demo Video]
+[![Demo video](./demo.mp4)](./demo.mp4)
+
 *The video demonstrates the full user journey: setting up a PIN, logging a mood, writing an entry, and viewing the graph.*
 
 ---
